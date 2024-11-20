@@ -36,7 +36,7 @@ func (v *Validin) DoQuery(baseUrl string, parameters map[string]string) ([]byte,
 	fmt.Println(req.URL.String())
 	req.Header.Add("Authorization", "BEARER "+v.ApiKey)
 	req.Header.Add("content-type", "application/json")
-	//req.Header.Add("User-Agent", "GoValidin/1.0.0")
+	req.Header.Add("User-Agent", "GoValidin/1.0.0")
 	//client := &http.Client{}
 	fmt.Println(req.Header)
 	resp, err := http.DefaultClient.Do(req)
